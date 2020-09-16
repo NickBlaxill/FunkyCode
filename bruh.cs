@@ -2,6 +2,8 @@ using System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
 
+//this will give you free vbucks
+
 class Program
 {
     [DllImport("wtsapi32.dll", SetLastError = true)]
