@@ -7,6 +7,7 @@ namespace Bruh
     public static void Main(string[] args)
     {
       Console.WriteLine("Hello there");
+      Console.ReadLine();
     }
   }
  
